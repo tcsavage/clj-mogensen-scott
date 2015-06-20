@@ -53,22 +53,22 @@
   [[[destr & binders] expr]]
   (if binders
     `(~(sym->kw destr)
-        (let [[~@binders] fields##]
-          ~expr))
+      (let [[~@binders] fields##]
+        ~expr))
     `(~(sym->kw destr)
-        ~expr)))
+      ~expr)))
 
 (defn match-adt*
   [on cases default]
   (unify-gensyms
-    `(let [[tag# & fields##] (represent-tagged-vector ~on)]
-     (case tag#
-       ~@(mapcat match-case cases)
-       ~default))))
+   `(let [[tag# & fields##] (represent-tagged-vector ~on)]
+      (case tag#
+        ~@(mapcat match-case cases)
+        ~default))))
 
 (defmacro match-adt
   [on & cs]
   (let [[cases default] (if (odd? (count cs))
-                ((juxt butlast (comp first last)) (partition-all 2 cs))
-                [(partition 2 cs) '(throw (Exception. "No default case"))])]
+                          ((juxt butlast (comp first last)) (partition-all 2 cs))
+                          [(partition 2 cs) '(throw (Exception. "No default case"))])]
     (match-adt* on cases default)))
