@@ -1,6 +1,6 @@
 (ns user
   (:require [clojure.tools.namespace.repl :refer [refresh]]
-            [clj-mogensen-scott.core :refer [defadt match-adt]]))
+            [clj-scott-adts.core :refer [defadt match-adt]]))
 
 (defadt Maybe
   (just a)

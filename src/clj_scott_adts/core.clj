@@ -1,4 +1,4 @@
-(ns clj-mogensen-scott.core
+(ns clj-scott-adts.core
   (:require [camel-snake-kebab.core :refer [->kebab-case]]
             [potemkin.macros :refer [unify-gensyms]]))
 

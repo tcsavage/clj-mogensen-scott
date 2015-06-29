@@ -1,11 +1,11 @@
-# clj-mogensen-scott
+# clj-scott-adts
 
-ADTs in Clojure using Mogensen-Scott encoding.
+ADTs in Clojure using Scott encoding.
 
 ## Usage
 
 ```
-(require '[clj-mogensen-scott.core :refer [defadt match-adt]])
+(require '[clj-scott-adts.core :refer [defadt match-adt]])
 
 (defadt Maybe
   (just a)

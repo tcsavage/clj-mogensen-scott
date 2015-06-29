@@ -1,6 +1,6 @@
-(defproject clj-mogensen-scott "0.1.0-SNAPSHOT"
-  :description "ADTs in Clojure using Mogensen-Scott encoding"
-  :url "https://github.com/tcsavage/clj-mogensen-scott"
+(defproject clj-scott-adts "0.1.0-SNAPSHOT"
+  :description "ADTs in Clojure using Scott encoding"
+  :url "https://github.com/tcsavage/clj-scott-adts"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
